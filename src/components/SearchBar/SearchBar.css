@@ -1,0 +1,59 @@
+.cocktail-search{
+    text-align: center;
+    padding: 10px;
+    font-size: 16pt;
+    background-color: #89A894;
+    color: white;
+}
+
+.cocktail-search select{
+    font-size: 14pt;
+    padding: 2pt;
+}
+
+.cocktail-search input {
+    font-size: 16pt;
+    margin: 10px;
+}
+
+.cocktail-search button{
+    font-size: 14pt;
+    padding: 3px;
+}
+
+@media screen and (min-width: 540px){
+    .cocktail-search{
+        min-height: 20vh;
+    }
+
+    .cocktail-search label{
+        font-size: 18pt;
+        font-weight: bolder;
+    }
+
+    .cocktail-search select{
+        font-size: 16pt;
+    }
+
+    .cocktail-search input {
+        font-size: 20pt;
+        margin: 10px;
+    }
+    
+    .cocktail-search button{
+        font-size: 18pt;
+        padding: 3px;
+    }
+}
+
+@media screen and (min-width: 840px){
+    .cocktail-search{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .search-category{
+        padding: 10px;
+    }
+}

@@ -1,0 +1,21 @@
+.register-form{
+    display: flex;
+    flex-direction: column;
+    background-color: #ADFCF9;
+    min-height: 75vh;
+}
+
+.register-form div{
+    margin: 25px;
+    font-size: 14pt;
+    padding: 10px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+}
+
+.submit-registration-form{
+    align-self: center;
+    margin-top: 2rem;
+    width: 40%;
+}

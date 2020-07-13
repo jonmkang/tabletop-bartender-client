@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+.App{
+    margin: 0;
+    padding: 0;
+}
+
+.App_main{
+    min-height: 60vh;
+}
+
+footer{
+    text-align: center;
+    background-color: #341C1C;
+    color: white;
+    padding: .5rem;
+    font-size: 14pt;
+}
+
+@media screen and (min-width: 540px){
+    footer{
+        padding: 2rem;
+    }
+}
