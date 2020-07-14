@@ -21,9 +21,14 @@
     padding: 3px;
 }
 
+.searchList{
+    max-height: 50px;
+}
+
 @media screen and (min-width: 540px){
     .cocktail-search{
         min-height: 20vh;
+        padding: 20px;
     }
 
     .cocktail-search label{

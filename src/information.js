@@ -22,6 +22,7 @@ export default {
             "image": "https://res.cloudinary.com/hjqklbxsu/image/upload/f_auto,fl_lossy,q_auto/v1536678158/social-share/JD_OldFashioned_AllPurpose_DigitalRecipePost.jpg"
         }
     ],
+    "baseLiquor":  ["Vodka", "Tequila", "Rum", "Whiskey", "Gin"],
     "ingredients":  ["Vodka", "Tequila", "Rum", "Whiskey", "Gin", "Orange Juice", "Lime Juice", "Simple Syrup", "Agave", "Cherry", "Orange Slice"],
     "flavorNotes": ["Citrus", "Peaty", "Sweet", "Bitter", "Floral"]    
 }
