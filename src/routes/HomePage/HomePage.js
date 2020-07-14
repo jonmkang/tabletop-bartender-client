@@ -16,11 +16,11 @@ export default class HomePage extends Component{
                 </section>
                 <SearchBar/>
                 <section className='register-text'>
-                    <h2>Register now!</h2>
-                    <p>With an active account, you can add your own cocktail! Using the ingredients available in our database, you can add your own twist and style to our website. This website can be used without signing up, but you cannot add your own creations.</p>
                     <Link to='/register'>
-                        Click here to register
+                        <h2>Register now!</h2>
                     </Link>
+                    <p>With an active account, you can add your own cocktail! Using the ingredients available in our database, you can add your own twist and style to our website. This website can be used without signing up, but you cannot add your own creations.</p>
+                    
                 </section>
             </div>
             

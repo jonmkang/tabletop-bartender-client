@@ -17,5 +17,35 @@
 .submit-registration-form{
     align-self: center;
     margin-top: 2rem;
-    width: 40%;
+    width: 20%;
+}
+
+@media screen and (min-width: 540px){
+    .register-form{
+        padding: 10rem;
+    }
+    .register-form div{
+        justify-content: space-around;
+    }
+
+    .submit-registration-form{
+        font-size: 20pt;
+        width: 20%
+    }
+}
+
+@media screen and (min-width: 840px){
+    .register-form div{
+        font-size: 20pt;
+    }
+
+    .register-form label, .register-form input{
+        font-size: 20pt;
+        padding: 10px;
+        width: 40%;
+    }
+
+    .submit-registration-form{
+        width: 15%
+    }
 }

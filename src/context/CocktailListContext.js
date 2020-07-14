@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import information from '../information'
 
 const CocktailListContext = React.createContext({
   CocktailList: [],

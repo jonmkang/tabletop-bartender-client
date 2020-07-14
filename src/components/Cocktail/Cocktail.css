@@ -1,0 +1,77 @@
+.cocktail{
+    background-color: #341C1C;
+    color: white;
+    padding: 20px;
+}
+
+.cocktail-flavor{
+    text-align: center;
+}
+
+.cocktail h4{
+    margin: 0;
+    text-align: center;
+    font-size: 16pt;
+}
+
+.cocktail-ingredients{
+    list-style: none;
+}
+
+.cocktail-recipe{
+    text-indent: 1rem;
+}
+
+.cocktail-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15pt 15pt;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+@media screen and (min-width:540px) {
+    .cocktail-description{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cocktail-flavor{
+        font-size: 16pt;
+    }
+    
+    .cocktail-ingredients{
+        flex:1;
+    }
+
+    .cocktail-recipe{
+        flex:2;
+    }
+}
+
+@media screen and (min-width: 720px){
+    .cocktail-flavor{
+        font-size: 20pt;
+    }
+
+    .cocktail h4{
+        font-size: 26pt;
+    }
+
+    .cocktail-ingredients{
+        padding-right: 30px;
+        font-size: 18pt;
+        text-align: right;
+    }
+
+    .cocktail-recipe{
+        font-size: 16pt;
+        text-align: center;
+    }
+
+    .cocktail-image{
+        max-width: 400px;
+        max-height: 400px;
+    }
+}

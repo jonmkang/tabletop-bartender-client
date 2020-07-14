@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import './SearchBar.css'
 
 export default class SearchBar extends Component{
 
+    handleOnSubmit = e => {
+        e.preventDefault()
+        this.setState({ error: null })
+    }
 
     render(){
         return(
@@ -26,7 +31,9 @@ export default class SearchBar extends Component{
                         name="query"
                         id="query"
                         />
-                    <button type="submit">Search</button>
+                    <Link to='/cocktailSearch'>
+                        <button type="submit">Search</button>
+                    </Link>
                 </div>
             </form>
         )
