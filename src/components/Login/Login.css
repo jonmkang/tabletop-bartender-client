@@ -10,17 +10,17 @@
 }
 
 .login-form label{
-    padding: 2px;
+    font-size: 16pt;
+    padding: 10px;
 }
 
-.login-form input{
-    width: 80%;
-}
-
-.user_name, .password{
+.user_email, .password{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 12pt;
-    padding: 5px;
 }
 
 .login-form button{
@@ -31,13 +31,19 @@
     border: none;
 }
 
+.login-form input{
+    width: 90%;
+    height: 2rem;
+    font-size: 12pt;
+}
+
 
 @media screen and (min-width:540px){
     .login{
         min-height: 80vh;
     }
 
-    .user_name, .password{
+    .user_email, .password{
         text-align: center;
         font-size: 20pt;
         padding: 5px;
@@ -48,9 +54,9 @@
     }
     
     .login-form input{
-        width: 80%;
+        width: 60%;
         padding: 10px;
-        font-size: 18pt;
+        font-size: 14pt;
     }
 
     .login-form button{
@@ -64,8 +70,8 @@
 
 @media screen and (min-width: 720px){
     .login-form input{
-        width: 35%;
+        width: 45%;
         padding: 10px;
-        font-size: 18pt;
+        font-size: 16pt;
     }
 }

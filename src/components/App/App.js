@@ -4,16 +4,33 @@ import HomePage from '../../routes/HomePage/HomePage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import RegisterPage from '../../routes//RegisterPage/RegisterPage'
 import CocktailSearch from '../../routes/CocktailSearch/CocktailSearch'
+import AddCocktail from '../../routes/AddCocktail/AddCocktail'
+
 import "./App.css"
-import information from '../../information'
+
+import CocktailListContext from '../../context/CocktailListContext'
+import CocktailApiService from '../../services/cocktails-api-service'
+import IngredientsApiService from '../../services/ingredients-api-service'
+import FlavorsApiService from '../../services/flavors-api-service'
+
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      cocktails: [information.cocktails]
-    }
+  static contextType = CocktailListContext;
+
+  componentDidMount(){
+    this.context.clearError()
+    CocktailApiService.getCocktails()
+      .then(this.context.setCocktailList)
+      .catch(this.context.setError)
+
+    IngredientsApiService.getIngredients()
+      .then(this.context.setIngredientsList)
+      .catch(this.context.setError)
+
+    FlavorsApiService.getFlavors()
+      .then(this.context.setFlavorsList)
+      .catch(this.context.setError)
   }
 
   render() {
@@ -37,6 +54,10 @@ class App extends Component {
               exact
               path='/cocktailSearch'
               component={CocktailSearch}/>
+            <Route
+              exact
+              path='/addCocktail'
+              component={AddCocktail}/>
           </Switch>
         </main>
         <footer>Created by Jonathan Kang. 2020.</footer>

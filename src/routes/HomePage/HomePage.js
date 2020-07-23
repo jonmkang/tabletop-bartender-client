@@ -12,7 +12,7 @@ export default class HomePage extends Component{
                 <Header />
                 <section className='description'>
                     <span className='Tagline_large'>Imagining. Inventing. Imbibing.</span>
-                    <p>Find a cocktail that will quench your inner thirst. You can find new cocktails based on specific ingredients you may prefer, flavor note preference without knowing the ingredients, or a main liquor preference.  For example, a flavor note would be citrus or floral, while liquor preference may include vodka or whiskey.</p>
+                    <p>Find a cocktail that will quench your inner thirst. You can find new cocktails based on specific ingredients you may prefer, flavor note preference without knowing the ingredients, or the cocktail name.  For example, a flavor note would be citrus or floral, while ingredientse may include vodka or whiskey.</p>
                 </section>
                 <SearchBar/>
                 <section className='register-text'>

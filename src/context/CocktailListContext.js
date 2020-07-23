@@ -1,23 +1,43 @@
 import React, { Component } from 'react'
-// import information from '../information'
 
 const CocktailListContext = React.createContext({
-  CocktailList: [],
+  cocktailList: [],
+  ingredientsList: [],
+  flavorsList: [],
+  query: null,
   error: null,
   setError: () => {},
   clearError: () => {},
   setCocktailList: () => {},
+  setIngredientsList: () => {},
+  setFlavorsList: () => {},
+  setQuery: () => {}
 })
 export default CocktailListContext
 
 export class CocktailListProvider extends Component {
   state = {
     cocktailList: [],
+    ingredientsList: [],
+    flavorsList: [],
+    query: null,
     error: null,
   };
 
+  setQuery = query => {
+    this.setState({ query })
+  }
+
   setCocktailList = cocktailList => {
     this.setState({ cocktailList })
+  }
+
+  setIngredientsList = ingredientsList => {
+    this.setState({ ingredientsList })
+  }
+  
+  setFlavorsList = flavorsList => {
+    this.setState({ flavorsList })
   }
 
   setError = error => {
@@ -32,10 +52,14 @@ export class CocktailListProvider extends Component {
   render() {
     const value = {
       cocktailList: this.state.cocktailList,
+      ingredientsList: this.state.ingredientsList,
+      flavorsList: this.state.flavorsList,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setCocktailList: this.setCocktailList,
+      setIngredientsList: this.setIngredientsList,
+      setFlavorsList: this.setFlavorsList
     }
     return (
       <CocktailListContext.Provider value={value}>

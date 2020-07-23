@@ -6,6 +6,14 @@
     color: white;
 }
 
+.search-category{
+    padding: 5px;
+}
+
+.select{
+    padding: 5px;
+}
+
 .cocktail-search select{
     font-size: 14pt;
     padding: 2pt;
@@ -23,6 +31,10 @@
 
 .searchList{
     max-height: 50px;
+}
+
+.query-box{
+    color: black;
 }
 
 @media screen and (min-width: 540px){
@@ -49,6 +61,7 @@
         font-size: 18pt;
         padding: 3px;
     }
+
 }
 
 @media screen and (min-width: 840px){
@@ -56,6 +69,22 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+    }
+
+    .query-box{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        height: 4rem;
+    }
+
+    .select{
+        width: 70%;
+        margin: 10px;
+    }
+
+    .submit{
+        margin: 15px;
     }
 
     .search-category{

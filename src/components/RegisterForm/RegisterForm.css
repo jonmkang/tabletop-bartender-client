@@ -5,6 +5,10 @@
     min-height: 75vh;
 }
 
+.error{
+    text-align: center;
+}
+
 .register-form div{
     margin: 25px;
     font-size: 14pt;
