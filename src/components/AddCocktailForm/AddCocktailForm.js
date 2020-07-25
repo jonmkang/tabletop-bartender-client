@@ -29,7 +29,7 @@ export default class AddCocktailForm extends Component{
         e.preventDefault();
         const { title, recipe, image, flavor_profile } = e.target;
         const { cocktailList } = this.context;
-        console.log(cocktailList)
+
         if(this.state.ingredients.length > 6){
             this.setState({ error: "You can only have at most 6 ingredients"});
             return this.state.error
@@ -61,7 +61,6 @@ export default class AddCocktailForm extends Component{
         CocktailApiService.addCocktail(cocktailToPost)
             .then(res => {
                     cocktailList.push(res)
-                    console.log(cocktailList)
                     this.props.createCocktailSuccess()
                 })
     }
