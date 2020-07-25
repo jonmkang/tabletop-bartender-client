@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CocktailListContext from '../../context/CocktailListContext'
+import CocktailApiService from '../../services/cocktails-api-service'
 import AddIngredient from '../AddIngredient/AddIngredient'
 import xss from 'xss'
 
@@ -27,9 +28,10 @@ export default class AddCocktailForm extends Component{
     handleSubmit = e => {
         e.preventDefault();
         const { title, recipe, image, flavor_profile } = e.target;
-
+        const { cocktailList } = this.context;
+        console.log(cocktailList)
         if(this.state.ingredients.length > 6){
-            this.setState({ error: "You can only have at most 6 ingredients"})
+            this.setState({ error: "You can only have at most 6 ingredients"});
             return this.state.error
         } 
         
@@ -41,16 +43,27 @@ export default class AddCocktailForm extends Component{
         }
 
         if(flavor_profile.value !== "None"){
-            cocktailToPost.flavor = flavor_profile.value
+            cocktailToPost.flavor = flavor_profile.value;
         }
 
-        if(this.checkURL(image.value)){
-            cocktailToPost.image = xss(image.value)
-        }else{
-            this.setState({ error: "You have entered an invalid image URL!"})
+        if(image.value.length > 0){
+            if(this.checkURL(image.value)){
+                cocktailToPost.image = xss(image.value);
+            } else {
+                this.setState({ error: "You have entered an invalid image URL!"})
+            }
         }
 
-        console.log(cocktailToPost)
+        if(!!this.state.ingredients){
+            cocktailToPost.ingredients = this.state.ingredients.map(item => item.value)
+        }
+        
+        CocktailApiService.addCocktail(cocktailToPost)
+            .then(res => {
+                    cocktailList.push(res)
+                    console.log(cocktailList)
+                    this.props.createCocktailSuccess()
+                })
     }
 
     render(){

@@ -18,7 +18,6 @@ export default class Cocktail extends Component{
                 }
             }
         }
-        console.log(newCocktail)
         return newCocktail
     }
 
