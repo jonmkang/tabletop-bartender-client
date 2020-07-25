@@ -3,11 +3,13 @@ import React, { Component } from 'react'
 const CocktailListContext = React.createContext({
   cocktailList: [],
   ingredientsList: [],
+  searchResults: [],
   flavorsList: [],
   query: null,
   error: null,
   setError: () => {},
   clearError: () => {},
+  setSearchResults: () => {},
   setCocktailList: () => {},
   setIngredientsList: () => {},
   setFlavorsList: () => {},
@@ -20,6 +22,7 @@ export class CocktailListProvider extends Component {
     cocktailList: [],
     ingredientsList: [],
     flavorsList: [],
+    searchResults: [],
     query: null,
     error: null,
   };
@@ -30,6 +33,10 @@ export class CocktailListProvider extends Component {
 
   setCocktailList = cocktailList => {
     this.setState({ cocktailList })
+  }
+
+  setSearchResults = searchResults => {
+    this.setState({ searchResults })
   }
 
   setIngredientsList = ingredientsList => {
@@ -54,12 +61,14 @@ export class CocktailListProvider extends Component {
       cocktailList: this.state.cocktailList,
       ingredientsList: this.state.ingredientsList,
       flavorsList: this.state.flavorsList,
+      searchResults: this.state.searchResults,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
       setCocktailList: this.setCocktailList,
       setIngredientsList: this.setIngredientsList,
-      setFlavorsList: this.setFlavorsList
+      setFlavorsList: this.setFlavorsList,
+      setSearchResults: this.setSearchResults
     }
     return (
       <CocktailListContext.Provider value={value}>

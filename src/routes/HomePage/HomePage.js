@@ -5,6 +5,17 @@ import { Link } from 'react-router-dom'
 import Header from '../../components/Header/Header'
 
 export default class HomePage extends Component{
+    static defaultProps = {
+        location: {},
+        history: {
+          push: () => {},
+        },
+    }
+
+    handleSearchSuccess = () => {
+        const { history } = this.props
+        history.push('/cocktailSearch')
+    }
 
     render(){
         return(
@@ -14,7 +25,7 @@ export default class HomePage extends Component{
                     <span className='Tagline_large'>Imagining. Inventing. Imbibing.</span>
                     <p>Find a cocktail that will quench your inner thirst. You can find new cocktails based on specific ingredients you may prefer, flavor note preference without knowing the ingredients, or the cocktail name.  For example, a flavor note would be citrus or floral, while ingredientse may include vodka or whiskey.</p>
                 </section>
-                <SearchBar/>
+                <SearchBar handleSearchSuccess={this.handleSearchSuccess}/>
                 <section className='register-text'>
                     <Link to='/register'>
                         <h2>Register now!</h2>

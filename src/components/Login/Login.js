@@ -24,7 +24,7 @@ export default class Login extends Component{
             user_email.value = ''
             password.value = ''
             TokenService.saveAuthToken(res.authToken)
-            console.log('login successful', res.authToken)
+
             this.props.onLoginSuccess()
         })
         .catch(res => {
