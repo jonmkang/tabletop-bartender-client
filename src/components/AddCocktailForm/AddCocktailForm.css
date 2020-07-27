@@ -1,0 +1,75 @@
+.add-cocktail-form{
+    background-color: #89A894;
+    min-height: 60vh;
+    padding: 1rem;
+}
+
+
+
+.add-cocktail-form label{
+    font-size: 12pt;
+    padding: 5px;
+    color: white;
+}
+
+.add-cocktail-recipe label{
+    display: block;
+}
+
+.add-cocktail-form input, .add-cocktail-form select{
+    margin: 5px;
+    font-size: 14pt;
+}
+
+.add-cocktail-recipe textarea{
+    margin: 5px;
+    height: 200px;
+}
+
+.submit-button{
+    margin: 0 auto;
+    border-radius: 4pt 4pt;
+    padding: 10px;
+    font-size: 14pt;
+    display: block;
+    background-color: #4B644A;
+    color: white;
+}
+
+
+@media screen and (min-width: 540px){
+    .add-cocktail-title, .add-cocktail-recipe, .add-cocktail-image, .add-cocktail-flavor{
+        text-indent: 1.3rem;
+    }
+
+    .add-cocktail-recipe label{
+        float: left;
+    }
+
+    .add-cocktail-recipe textarea{
+        margin: 5px;
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 720px){
+    .add-cocktail-form{
+        padding: 50px;
+        padding-left: 300px;
+        padding-right: 300px;
+    }
+
+    .add-cocktail-recipe textarea{
+        font-size: 18pt;
+    }
+
+    .add-cocktail-form input, .add-cocktail-form select{
+        margin: 5px;
+        font-size: 18pt;
+    }
+
+    .add-cocktail-form label{
+        padding-left: 12px;
+        font-size: 18pt;
+    }
+}

@@ -3,6 +3,7 @@ import CocktailListContext from '../../context/CocktailListContext'
 import CocktailApiService from '../../services/cocktails-api-service'
 import AddIngredient from '../AddIngredient/AddIngredient'
 import xss from 'xss'
+import './AddCocktailForm.css'
 
 
 
@@ -70,8 +71,10 @@ export default class AddCocktailForm extends Component{
         const { error } = this.state
         return(
             <div className='add-cocktail-form'>
-                <form onSubmit={this.handleSubmit}>
-                    <div className='title'>
+                <form  
+                    onSubmit={this.handleSubmit}>
+
+                    <div className='add-cocktail-title'>
                         <label htmlFor='title'>
                             Cocktail Name:
                         </label>
@@ -81,16 +84,21 @@ export default class AddCocktailForm extends Component{
                             id='title'/>
                     </div>
                     <AddIngredient handleIngredients={this.handleIngredients} />
-                    <div className='recipe'>
+                    <div className='add-cocktail-recipe'>
                         <label htmlFor='recipe'>
                             Recipe: 
                         </label>
-                        <br/>
-                        <textarea name='recipe' id='recipe'>
+                        <textarea 
+                            name='recipe' 
+                            id='recipe'
+                            placeholder="This is a sample recipe"
+                            cols="30"
+                            rows="5"
+                            required>
 
                         </textarea>
                     </div>
-                    <div className='image'>
+                    <div className='add-cocktail-image'>
                         <label htmlFor='image'>
                             Image URL: 
                         </label>
@@ -99,21 +107,23 @@ export default class AddCocktailForm extends Component{
                             id='image'
                             />
                     </div>
-                    <label htmlFor="flavor_profile">
-                        Flavor Profile: 
-                    </label>
-                    <select 
-                        required
-                        aria-label='Flavor Profile'
-                        name='flavor_profile'
-                        id='flavor_profile'
-                        defaultValue={1}
-                        >
-                        {flavorProfileList}
-                        <option value={null}>None</option>
-                    </select>
+                    <div className="add-cocktail-flavor">
+                        <label htmlFor="flavor_profile">
+                            Flavor Profile: 
+                        </label>
+                        <select 
+                            required
+                            aria-label='Flavor Profile'
+                            name='flavor_profile'
+                            id='flavor_profile'
+                            defaultValue={1}
+                            >
+                            {flavorProfileList}
+                            <option value={null}>None</option>
+                        </select>
+                    </div>
                     <br/>
-                    <button type='submit'>Submit cocktail!</button>
+                    <button className="submit-button" type='submit'>Submit cocktail!</button>
                 </form>
                 {error}
             </div>
