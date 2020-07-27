@@ -82,7 +82,7 @@ export default class RegisterForm extends Component{
                             name='first_name'
                             id='register_first_name'/>
                     </div>
-                    <div className='user_email'>
+                    <div className='register-user_email'>
                         <label htmlFor='user_email'>
                             Email
                         </label>
@@ -103,7 +103,7 @@ export default class RegisterForm extends Component{
                     </div>
                     <p className='error'>{error}</p>
                     <button type='submit' className='submit-registration-form'>
-                    Login
+                    Register
                     </button>
                 </form>
                 
