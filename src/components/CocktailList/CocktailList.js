@@ -16,7 +16,7 @@ export default class CocktailList extends Component{
                 </div>
             )
         }
-        console.log(searchResults)
+
         return(
             <div className='cocktailList'>
                 {fullCocktailList}
