@@ -19,16 +19,13 @@ export default class SearchBar extends Component{
 
     //This filters based on the searched category and values searched. This will set a "search results list" to be rendered in CocktailList.  If nothing is returned, the base case is to return all cocktails.
     handleOnSubmit = e => {
-        e.preventDefault()
         this.setState({ error: null })
         const searchCategory= this.state.searchCategory;
         const { cocktailList } = this.context;
 
-
         switch(searchCategory){
             case "flavorNotes":
-                this.context.setSearchResults(cocktailList.filter(item => item.flavor === this.state.searchQuery))
-                break;
+                return this.context.setSearchResults(cocktailList.filter(item => item.flavor === this.state.searchQuery))
             case "ingredients":
                 this.context.setSearchResults(cocktailList.filter(item => {
                     for(const [key, value] of Object.entries(item)){
@@ -41,14 +38,10 @@ export default class SearchBar extends Component{
                 }))
                 break;
             case "name":
-                this.context.setSearchResults(cocktailList.filter(item => item.id === this.state.searchQuery))
-                break;
+                return this.context.setSearchResults(cocktailList.filter(item => item.id === this.state.searchQuery))
             default: 
-                this.context.setSearchResults(cocktailList)
-                break;
+                return this.context.setSearchResults(cocktailList)
         }
-
-        this.props.handleSearchSuccess();
     }
 
     changeSearchCategory = e => {
@@ -63,6 +56,7 @@ export default class SearchBar extends Component{
         this.setState({
             searchQuery: newValue
         })
+        setTimeout(this.handleOnSubmit, 1)
     }
 
     setSearchItems(items){
@@ -92,7 +86,7 @@ export default class SearchBar extends Component{
         }
 
         return(
-            <form className='cocktail-search' onSubmit={this.handleOnSubmit}>
+            <form className='cocktail-search' onChange={this.handleOnSubmit}>
                 <div className='search-category'>
                     <label htmlFor="search">Search by: </label>
                     <select 
@@ -110,9 +104,6 @@ export default class SearchBar extends Component{
                 </div>
                 <div className="query-box">
                     <Select className="select" onChange={this.changeSearchQuery} options={searchItems}/>
-                    {/* <Link to='/cocktailSearch'> */}
-                        <button className='submit' type="submit">Search</button>
-                    {/* </Link> */}
                 </div>
             </form>
         )

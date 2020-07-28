@@ -46,6 +46,16 @@
     color: grey
 }
 
+.home-page-search{
+    background-color:#89A894;
+}
+
+.search-link{
+    display: block;
+    margin: 0 auto;
+    font-size: 14pt;
+}
+
 @media screen and (min-width:540px){
     .description{
         min-height: 35vh;
@@ -76,6 +86,10 @@
     }
 
     .register-text a{
+        font-size: 18pt;
+    }
+
+    .search-link{
         font-size: 18pt;
     }
 }
