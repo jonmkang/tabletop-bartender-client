@@ -23,7 +23,8 @@
 
 .add-cocktail-recipe textarea{
     margin: 5px;
-    height: 200px;
+    height: 150px;
+    width: 150px;
 }
 
 .submit-button{
@@ -57,6 +58,7 @@
         padding: 50px;
         padding-left: 300px;
         padding-right: 300px;
+        min-height: 75vh;
     }
 
     .add-cocktail-recipe textarea{
