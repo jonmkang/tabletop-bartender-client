@@ -5,7 +5,7 @@ When downloading tabletop-bartender-client, install all dependencies with npm in
 
 
 Once they are installed, you can run the command npm start to run the client locally. 
-This will connect to a server I set up on Heroku.  You can create your own database with my server code.  
+This will connect to a server I set up on Heroku.  You can create your own database with my server project.  
 
 [Server github repo](https://github.com/jonmkang/tabletop-bartender-server)
 
