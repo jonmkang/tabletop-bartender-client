@@ -1,11 +1,13 @@
-    Name: Tabletop Bartender
-    Live app: https://tabletop-bartender-client.vercel.app/
+Name: Tabletop Bartender
+Live app: [Tabletop Bartender](https://tabletop-bartender-client.vercel.app/)
 
-    When downloading tabletop-bartender-client, install all dependencies with npm install.
+When downloading tabletop-bartender-client, install all dependencies with npm install.
+
+
 Once they are installed, you can run the command npm start to run the client locally. 
 This will connect to a server I set up on Heroku.  You can create your own database with my server code.  
 
-    The link to the server github is: 
+[Server github repo](https://github.com/jonmkang/tabletop-bartender-server)
 
 
 
