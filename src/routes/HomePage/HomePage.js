@@ -22,7 +22,6 @@ export default class HomePage extends Component{
             <div>
                 <Header />
                 <section className='description'>
-                    <span className='Tagline_large'>Imagining. Inventing. Imbibing.</span>
                     <p>Find a cocktail that will quench your inner thirst. You can find new cocktails based on specific ingredients you may prefer, flavor note preference without knowing the ingredients, or the cocktail name.  For example, a flavor note would be citrus or floral, while ingredients may include lime juice, simple syrup, or vodka.</p>
                 </section>
                 <div className='home-page-search'>

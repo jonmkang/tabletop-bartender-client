@@ -39,8 +39,7 @@
 
 @media screen and (min-width: 540px){
     .cocktail-search{
-        min-height: 20vh;
-        padding: 20px;
+        padding: 40px;
     }
 
     .cocktail-search label{
@@ -67,24 +66,17 @@
 @media screen and (min-width: 840px){
     .cocktail-search{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: center;
     }
 
     .query-box{
-        width: 40%;
-        display: flex;
-        flex-direction: row;
         height: 4rem;
     }
 
     .select{
-        width: 70%;
-        margin: 10px;
-    }
-
-    .submit{
-        margin: 15px;
+        width: 50%;
+        margin: 10px auto;
     }
 
     .search-category{

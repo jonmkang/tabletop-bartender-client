@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CocktailListContext from '../../context/CocktailListContext'
 import Cocktail from '../Cocktail/Cocktail'
+import './CocktailList.css'
 
 export default class CocktailList extends Component{
     static contextType = CocktailListContext

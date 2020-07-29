@@ -1,0 +1,16 @@
+.cocktailList{
+    min-height: 75vh;
+    background-color: #341C1C;
+}
+
+@media screen and (min-width: 540px){
+    .cocktailList{
+        min-height: 68vh;
+    }
+}
+
+@media screen and (min-width: 720px){
+    .cocktailList{
+        min-height: 75vh;
+    }
+}

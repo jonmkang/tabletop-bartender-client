@@ -103,7 +103,7 @@ export default class SearchBar extends Component{
                     </select>
                 </div>
                 <div className="query-box">
-                    <Select className="select" onChange={this.changeSearchQuery} options={searchItems}/>
+                    <Select className="select" classNamePrefix="select" onChange={this.changeSearchQuery} options={searchItems}/>
                 </div>
             </form>
         )

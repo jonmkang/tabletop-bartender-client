@@ -58,8 +58,9 @@
 
 @media screen and (min-width:540px){
     .description{
-        min-height: 35vh;
+        min-height: 22vh;
     }
+
     .Tagline_large{
         display: block;
         text-align: center;

@@ -5,6 +5,7 @@
     text-align: center;
     background-color: #4B644A; 
     padding: 10px;
+    font-family: 'Acme', sans-serif;
 }  
 
 .Header h1 a{
@@ -16,15 +17,16 @@
 
 .Header_tagline{
     font-size: 20px;
-    padding: 5px;
+    padding: 10px;
     color: white;
 }
 
 .Header_links a{
-    font-size: 14pt;
+    font-size: 12pt;
     padding: 10px;
     text-decoration: none;
     color: White;
+    padding: 5px;
 }
 
 .Header_links a:hover{
@@ -36,16 +38,12 @@
     .Header{
         display: inline-block;
         width: 100%;
+        min-height: 3rem;
     }
 
     .Header h1{
-        font-size: 22pt;
+        font-size: 20pt;
         font-weight: normal;
-        clear: both;
-    }
-
-    .Header_tagline{
-        display: none;
     }
 
     .Header_links{
@@ -58,6 +56,9 @@
         font-size: 10pt;
     }
 
+    .Header_tagline{
+        display: block;
+    }
     
 }
 
