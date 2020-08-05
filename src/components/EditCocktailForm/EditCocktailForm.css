@@ -1,8 +1,10 @@
 .add-cocktail-form{
     background-color: #89A894;
-    min-height: 80vh;
+    min-height: 60vh;
     padding: 1rem;
 }
+
+
 
 .add-cocktail-form label{
     font-size: 12pt;

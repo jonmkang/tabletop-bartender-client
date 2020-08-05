@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import './Login.css'
 import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
+import CocktailListContext from '../../context/CocktailListContext'
 
 export default class Login extends Component{
+    static contextType = CocktailListContext;
+
     static defaultProps = {
         onLoginSuccess: () => {}
     }
@@ -23,8 +26,8 @@ export default class Login extends Component{
         .then(res => {
             user_email.value = ''
             password.value = ''
-            TokenService.saveAuthToken(res.authToken)
-
+            TokenService.saveAuthToken(JSON.stringify(res.authToken))
+            this.context.setUserId(res.user_id)
             this.props.onLoginSuccess()
         })
         .catch(res => {

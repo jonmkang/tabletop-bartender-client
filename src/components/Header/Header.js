@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import './Header.css'
+import CocktailListContext from '../../context/CocktailListContext'
 import TokenService from '../../services/token-service'
 
 export default class Header extends Component {
+    static contextType = CocktailListContext
+
     handleLogoutClick = () => {
-        TokenService.clearAuthToken()
+        this.context.clearUserId();
+        TokenService.clearAuthToken();
     }
     
     renderLoginLink() {
@@ -29,6 +33,9 @@ export default class Header extends Component {
                 <p className='Header_links'>
                     <Link to='/addCocktail'>
                         Add Cocktail
+                    </Link>
+                    <Link to='/myCocktails'>
+                        My Cocktails
                     </Link>
                     <Link 
                         onClick={this.handleLogoutClick}

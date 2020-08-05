@@ -31,6 +31,22 @@
     max-height: 200px;
 }
 
+.edit-cocktail{
+    display: block;
+    margin: 5px auto;
+    padding: 5px;
+    font-size: 14pt;
+    background-color: #341C1C;
+    border: 1px solid white;
+    border-radius: 5pt 5pt;
+    color: white;
+}
+
+.edit-cocktail:hover{
+    background-color: white;
+    color: #341C1C;
+}
+
 @media screen and (min-width:540px) {
     .cocktail-description{
         display: flex;

@@ -1,0 +1,11 @@
+.my-cocktails, .no-cocktails{
+    min-height: 85vh;
+    background-color: #341C1C;
+}
+
+.no-cocktails{
+    text-align: center;
+    color: white;
+    font-size: 14pt;
+    padding: 3rem;
+}

@@ -5,6 +5,7 @@ import LoginPage from '../../routes/LoginPage/LoginPage'
 import RegisterPage from '../../routes//RegisterPage/RegisterPage'
 import CocktailSearch from '../../routes/CocktailSearch/CocktailSearch'
 import AddCocktail from '../../routes/AddCocktail/AddCocktail'
+import MyCocktailPage from '../../routes/MyCocktailPage/MyCocktailPage'
 
 import "./App.css"
 
@@ -58,6 +59,10 @@ class App extends Component {
               exact
               path='/addCocktail'
               component={AddCocktail}/>
+            <Route
+              exact
+              path='/myCocktails'
+              component={MyCocktailPage}/>
           </Switch>
         </main>
         <footer>Created by Jonathan Kang. 2020.</footer>

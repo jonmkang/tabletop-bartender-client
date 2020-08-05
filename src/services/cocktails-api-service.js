@@ -27,6 +27,17 @@ const CocktailApiService = {
                 ? res.json().then(e => Promise.reject(e))
                 : res.json()
             )
+    },
+    editCocktail(cocktail){
+        return fetch(`${config.API_BASE_URL}/cocktails`, {
+            method: 'PATCH',
+            body: JSON.stringify(cocktail),
+            headers: {
+                "Accept":"application/json",
+                'Content-type': 'application/json', 
+                'authorization': `bearer ${TokenService.getAuthToken()}`
+            }
+        })
     }
 }
 

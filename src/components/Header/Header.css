@@ -22,7 +22,8 @@
 }
 
 .Header_links a{
-    font-size: 12pt;
+    font-size: 10pt;
+    margin: 10px;
     padding: 10px;
     text-decoration: none;
     color: White;
@@ -48,12 +49,17 @@
 
     .Header_links{
         position: absolute;
-        top: 0;
+        top: .5rem;
         right: 0;
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
     }
 
     .Header_links a{
+        
         font-size: 10pt;
+        margin: 5px;
     }
 
     .Header_tagline{
