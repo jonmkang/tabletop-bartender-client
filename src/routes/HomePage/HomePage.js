@@ -3,6 +3,7 @@ import './HomePage.css'
 import SearchBar from '../../components/SearchBar/SearchBar'
 import { Link } from 'react-router-dom'
 import Header from '../../components/Header/Header'
+import TokenService from '../../services/token-service'
 
 export default class HomePage extends Component{
     static defaultProps = {
@@ -17,6 +18,17 @@ export default class HomePage extends Component{
         history.push('/cocktailSearch')
     }
 
+    renderRegister= () => {
+        return (
+            <>
+            <Link to='/register'>
+                <h2>Register now!</h2>  
+            </Link>
+            <p>With an active account, you can add your own cocktail! Using the ingredients available in our database, you can make your own creation. This website can be used without signing up, but you cannot add your own creations.</p>
+            </>
+        )
+    }
+
     render(){
         return(
             <div>
@@ -29,10 +41,10 @@ export default class HomePage extends Component{
                     <button className='search-link' type="submit" onClick={this.handleSearchSuccess}>Search</button>
                 </div>
                 <section className='register-text'>
-                    <Link to='/register'>
-                        <h2>Register now!</h2>
-                    </Link>
-                    <p>With an active account, you can add your own cocktail! Using the ingredients available in our database, you can make your own creation. This website can be used without signing up, but you cannot add your own creations.</p>
+                {TokenService.hasAuthToken()
+                ? <></>
+                :this.renderRegister()}
+                    
                 </section>
             </div>
             
